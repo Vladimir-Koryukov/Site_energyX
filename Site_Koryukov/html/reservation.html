@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма бронирования - Energy X</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/reservation.css">
+    <script src="https://cdn.jsdelivr.net/npm/imask"></script> <!-- для маски номера -->
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header id="header" class="rounded-header"></header>
+
+    <main>
+        <section class="booking-form-container">
+            <h1>Форма бронирования</h1>
+            <form id="bookingForm" class="booking-form" onsubmit="showThankYouMessage(event)">
+                <!-- Выбор активности -->
+                <label for="activity">Выберите активность:</label>
+                <select id="activity" name="activity" required>
+                    <option value="" disabled selected>Выберите активность</option>
+                    <option value="parkour">Паркур</option>
+                    <option value="climbing">Скалолазание</option>
+                    <option value="paintball">Пейнтбол</option>
+                </select>
+
+                <!-- Имя и фамилия -->
+                <label for="name">Имя и фамилия:</label>
+                <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+
+                <!-- Номер телефона -->
+                <label for="phone">Номер телефона:</label>
+                <input type="text" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+
+                <!-- Планируемая дата посещения -->
+                <label for="date">Выберите дату:</label>
+                <input type="date" id="date" name="date" required min="">
+
+                <!-- Количество людей -->
+                <label for="people">Количество людей:</label>
+                <input type="number" id="people" name="people" min="1" step="1" required>
+
+                <!-- Уровень подготовки посетителей -->
+                <label for="level">Уровень подготовки посетителей:</label>
+                <select id="level" name="level" required>
+                    <option value="" disabled selected>Выберите уровень подготовки</option>
+                    <option value="novice">Новичок</option>
+                    <option value="amateur">Любитель</option>
+                    <option value="professional">Профессионал</option>
+                </select>
+
+                <button type="submit">Забронировать</button>
+            </form>
+
+            <!-- Сообщение благодарности -->
+            <div id="thankYouMessage" class="thank-you-message">
+                Спасибо за заявку! Скоро с вами свяжется наш специалист.
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер сайта -->
+    <footer id="footer" class="rounded-footer"></footer>
+
+    <!-- Подключение JavaScript для загрузки шапки и футера -->
+    <script src="/js/loadHeaderFooter.js"></script>
+
+    <!-- Маска для телефона и установка минимальной даты -->
+    <script>
+        // Маска для телефона
+        var phoneMask = IMask(
+            document.getElementById('phone'), {
+                mask: '+7 (000) 000-00-00'
+            }
+        );
+
+        // Установка минимальной даты для выбора даты посещения
+        var today = new Date();
+        today.setDate(today.getDate() + 1);
+        var minDate = today.toISOString().split('T')[0];
+        document.getElementById("date").setAttribute("min", minDate);
+
+        // Функция для отображения сообщения благодарности после отправки формы
+        function showThankYouMessage(event) {
+            event.preventDefault();  // Предотвращаем отправку формы
+
+            // Отображаем сообщение
+            document.getElementById("thankYouMessage").style.display = "block";
+
+            // Скрываем форму
+            document.getElementById("bookingForm").style.display = "none";
+        }
+    </script>
+</body>
+</html>
