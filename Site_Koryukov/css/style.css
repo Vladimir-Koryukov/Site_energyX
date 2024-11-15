@@ -13,10 +13,12 @@ body {
 }
 
 header {
+    max-width: 100%;
     background-color: #272b30;
     color: #e6e6e6;
     padding: 20px;
     display: flex;
+    text-align: center;
     justify-content: space-between;
     align-items: center;
     border-radius: 15px;
@@ -190,5 +192,3 @@ h1, h2, h3 {
     color: #ff4d4d;
     text-decoration: none;
 }
-
-
