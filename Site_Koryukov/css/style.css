@@ -197,14 +197,6 @@ h1, h2, h3 {
         align-items: center; /* Центрируем все элементы по горизонтали */
     }
 
-    .header-left {
-        display: flex;
-        flex-direction: column; /* Логотип и меню в столбик */
-        gap: 15px;
-        width: 100%; /* Ширина 100% для логотипа и меню */
-        align-items: center; /* Центрируем элементы в блоке */
-    }
-
     .main-menu ul {
         display: flex;
         flex-direction: column; /* Меню в столбик */
@@ -215,5 +207,13 @@ h1, h2, h3 {
 
     .booking-button {
         margin-top: 15px; /* Отступ сверху, чтобы кнопка не примыкала к меню */
+    }
+
+    main {
+        max-width: 100%;
+    }
+
+    .overlay {
+        font-size: 0.6em;
     }
 }
