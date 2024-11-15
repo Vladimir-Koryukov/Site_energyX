@@ -6,6 +6,6 @@ function loadHTML(elementId, filePath) {
         });
 }
 document.addEventListener("DOMContentLoaded", () => {
-    loadHTML("header", "header.html");
-    loadHTML("footer", "footer.html");
+    loadHTML("header", "/html/header.html");
+    loadHTML("footer", "/html/footer.html");
 });
