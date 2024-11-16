@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы - Energy X</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/activity.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header id="header" class="rounded-header"></header>
+
+    <main>
+        <section class="sorting-options">
+            <h2>Фильтр отзывов по активности</h2>
+            <!-- Чекбоксы для фильтрации по активности -->
+            <div class="filters">
+                <label>
+                    <input type="checkbox" class="activity-checkbox" value="Паркур" checked> Паркур
+                </label>
+                <label>
+                    <input type="checkbox" class="activity-checkbox" value="Скалолазание" checked> Скалолазание
+                </label>
+                <label>
+                    <input type="checkbox" class="activity-checkbox" value="Пейнтбол" checked> Пейнтбол
+                </label>
+            </div>
+
+        </section>
+
+        <!-- Отзывы -->
+        <section id="reviews">
+            <h2>Отзывы</h2>
+            <div id="reviews-list"></div>
+        </section>
+        
+    </main>
+
+    <!-- Футер сайта -->
+    <footer id="footer" class="rounded-footer"></footer>
+
+    <!-- Подключение JavaScript для загрузки шапки и футера -->
+    <script src="/js/loadHeaderFooter.js"></script>
+    <script src="/js/reviews.js"></script>
+</body>
+</html>

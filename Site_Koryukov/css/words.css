@@ -1,0 +1,93 @@
+/* Основной контейнер */
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 1fr;
+    gap: 10px;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #272b30;
+    border-radius: 10px;
+}
+
+.block-1 {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inner-block-1 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border: 2px solid red;
+    height: auto;
+    padding: 10px;
+}
+
+.block-2 {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.block-3 {
+    grid-column: 1 / span 2;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    min-height: 50px;
+    width: 100%;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 5px;
+    border:2px solid white;
+    border-radius: 3px;
+    background-color: #333;
+    color: #e6e6e6;
+}
+
+.analyze-button {
+    padding: 5px 10px;
+    background-color: #ff4d4d;
+    color: #e6e6e6;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.analyze-button:hover {
+    background-color: #e6e6e6;
+    color: #ff4d4d;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5px
+}
+
+.word-item {
+    display: inline-block;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: grab;
+    text-align: center;
+}
+
+.dragging {
+    opacity: 0.5;
+}

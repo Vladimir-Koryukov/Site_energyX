@@ -1,0 +1,362 @@
+.scene {
+    margin-left: 40%;
+    margin-top: 5%;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to bottom right, #EBCB80, white 100%);
+    position: relative;
+    transform: scale(var(--scale-factor)); 
+    transform-origin: top left; 
+    overflow: hidden;
+}
+
+.ground {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 35%;
+    background: linear-gradient(100deg, #8af0cd, #eaf1e9, #a7cca7, #408634, #80c67d, #b4f1b3  90%);
+}
+
+.sun {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 70px;
+    height: 70px;
+    background-color: #deb152;
+    border-radius: 50%;
+    box-shadow: 0 0 50px 20px rgba(222, 177, 82, 0.5);
+}
+
+.hoop {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border: 3px solid #60c44c;
+    border-radius: 50%;
+    bottom: -10px;
+}
+
+.hoop1 {
+    left: 0%;
+}
+
+.hoop2 {
+    left: 15%;
+}
+
+.hoop3 {
+    left: 30%;
+}
+
+.hoop4 {
+    left: 45%;
+}
+
+.hoop5 {
+    left: 60%;
+}
+
+.hoop6 {
+    left: 75%;
+}
+
+.hoop7 {
+    left: 88%;
+}
+
+.dog-body {
+    position: absolute;
+    width: 80px;
+    height: 55px;
+    background: linear-gradient(to bottom left, #6c401c, white 200%);
+    border-radius: 50%;
+    left: 58%;
+    transform: translateX(-50%);
+    bottom: 47px;
+    border: 1px solid #6e421e;
+}
+
+.dog-head {
+    position: absolute;
+    width: 40px;
+    height: 52px;
+    background: linear-gradient(#6b3f1b, white 150%);
+    border-radius: 50%;
+    left: 60px;
+    bottom: 50px;
+    border: 1px solid #6e421e;
+    z-index: 1;
+}
+
+.dog-ear-left, .dog-ear-right{
+    position: absolute;
+    width: 14px;
+    height: 20px;
+    background: #7d512a;
+    border-radius: 50%;
+    left: 54px;
+    top: 103px;
+    border: 1px solid #6e421e;
+}
+
+.dog-ear-left {
+    left: 54px;
+    top: 103px;
+}
+
+.dog-ear-right {
+    left: 91px;
+    top: 103px;
+}
+
+.dog-paw-1, .dog-paw-2, .dog-paw-3, .dog-paw-4 {
+    position: absolute;
+    width: 18px;
+    height: 23px;
+    background-color: #774c28;
+    border-radius: 50%/70%;
+    left: 46px;
+    bottom: 45px;
+    z-index: 2;
+}
+
+.dog-paw-1 {
+    left: 46px;
+    bottom: 45px;
+}
+
+.dog-paw-2 {
+    left: 131px;
+    bottom: 42px;
+}
+
+.dog-paw-3 {
+    left: 113px;
+    bottom: 42px;
+}
+
+.dog-paw-4 {
+    left: 95px;
+    bottom: 42px;
+}
+
+.dog-eye-left, .dog-eye-right {
+    position: absolute;
+    width: 9px;
+    height: 14px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.dog-eye-left {
+    left: 67px;
+    top: 118px;
+}
+
+.dog-eye-right {
+    left: 81px;
+    top: 118px;
+}
+
+.dog-lefteye-1, .dog-righteye-1 {
+    position: absolute;
+    width: 5px;
+    height: 7px;
+    background-color: #403e3e;
+    border-radius: 50%;
+    border: 1px solid #403e3e;
+    z-index: 4;
+}
+
+.dog-lefteye-1 {
+    left: 68px;
+    top: 123px;
+}
+
+.dog-righteye-1 {
+    left: 82px;
+    top: 123px;
+}
+
+.dog-nose-1, .dog-nose-2 {
+    position: absolute;
+    width: 18px;
+    height: 20px;
+    background-color: #82542d;
+    border-radius: 50%;
+    border: 1px solid #6e421e;
+    z-index: 1;
+}
+
+.dog-nose-1 {
+    left: 62px;
+    top: 133px;
+}
+
+.dog-nose-2 {
+    left: 75px;
+    top: 133px;
+}
+
+.dog-nose-triangle {
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 7px solid #3b2511;
+    transform: rotate(180deg);
+    margin-top: 132px;
+    margin-left: 72px;
+    z-index: 3;
+}
+
+.dog-tail {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    margin-top: 98px;
+    margin-left: 140px;
+    border-top-left-radius: 500px;
+    border-top-right-radius: 500px;
+    border-top: 4px solid #6b3f1b;
+    transform: rotate(135deg);
+    z-index: -1;
+}
+
+.dog-eyebrow-1, .dog-eyebrow-2 {
+    position: absolute;
+    width: 7px;
+    height: 2px;
+    border-top: 2px solid #403e3e;
+    z-index: 3;
+}
+
+.dog-eyebrow-1 {
+    margin-top: 114px;
+    margin-left: 65px;
+    transform: rotate(160deg);
+}
+
+.dog-eyebrow-2 {
+    margin-top: 114px;
+    margin-left: 85px;
+    transform: rotate(210deg);
+}
+
+.line-1, .line-2, .line-3, .line-4, .line-5, .line-6, .line-7, .line-8, .line-9, .line-10, .line-11, .line-12 {
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    border-top: 2px solid #462d18;
+    transform: rotate(90deg);
+    z-index: 3;
+}
+
+.line-1 {
+    margin-top: 147px;
+    margin-left: 45px;
+}
+
+.line-2 {
+    margin-top: 147px;
+    margin-left: 48px;
+}
+
+.line-3 {
+    margin-top: 147px;
+    margin-left: 51px;
+}
+
+.line-4 {
+    margin-top: 150px;
+    margin-left: 94px;
+}
+
+.line-5 {
+    margin-top: 150px;
+    margin-left: 97px;
+}
+
+.line-6 {
+    margin-top: 150px;
+    margin-left: 100px;
+}
+
+.line-7 {
+    margin-top: 150px;
+    margin-left: 113px;
+}
+
+.line-8 {
+    margin-top: 150px;
+    margin-left: 116px;
+}
+
+.line-9 {
+    margin-top: 150px;
+    margin-left: 119px;
+}
+
+.line-10 {
+    margin-top: 150px;
+    margin-left: 131px;
+}
+
+.line-11 {
+    margin-top: 150px;
+    margin-left: 134px;
+}
+
+.line-12 {
+    margin-top: 150px;
+    margin-left: 137px;
+}
+
+.dot-1, .dot-2, .dot-3, .dot-4, .dot-5, .dot-6 {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #403e3e;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+.dot-1 {
+    left: 65px;
+    top: 143px;
+}
+
+.dot-2 {
+    left: 71px;
+    top: 143px;
+}
+
+.dot-3 {
+    left: 68px;
+    top: 149px;
+}
+
+.dot-4 {
+    left: 80px;
+    top: 143px;
+}
+
+.dot-5 {
+    left: 86px;
+    top: 143px;
+}
+
+.dot-6 {
+    left: 83px;
+    top: 149px;
+}
+
+@media (max-width: 768px) {
+    .scene {
+        margin-left: 30%;
+    }
+}

@@ -1,0 +1,156 @@
+#flex-container {
+    margin-left: 40%;
+    margin-top: 5%;;
+    display: flex;    
+    width: 200px;
+    height: 200px;
+    position: relative;
+    background-color:#e7a239;
+}
+
+.letter {
+    fill:#ff4d4d;
+    width: 40px;
+    height: 40px;
+    stroke: #111110;
+    stroke-width: 1;
+}
+
+.letterB {
+    position: absolute;
+}
+
+.letterK {
+    position: absolute;
+    margin-left: 150px;
+    margin-top: 170px;
+}
+
+#flex-container:hover .letterB {
+    offset-path: path("M15.33 1C2.33004 56 -20.4163 157 47.83 157C99.5577 157 123.018 98.491 74.0858 79.6982");
+    offset-rotate: 0deg;
+    animation: moveLetterB 0.9s linear forwards;
+}
+
+@keyframes moveLetterB {
+    100% {
+        offset-distance: 100%;
+        transform: translate(-5px, -5px) scale(2.7);
+    }
+}
+
+#flex-container:hover .letterK {
+    offset-path: path("M86.5 156.5C99.5 101.5 122.246 0.499764 54 0.5C2.27228 0.500179 -21.1875 59.009 27.7442 77.8018");
+    offset-rotate: 0deg;
+    transform: translate(-85px, -125px);
+    animation: moveLetterK 0.9s linear forwards;
+}
+
+@keyframes moveLetterK {
+    100% {
+        offset-distance: 100%;
+        transform: translate(-48px, -120px) scale(2.7);
+    }
+}
+
+.figure {
+    display: none;
+    fill: #33bcdf;
+}
+
+#flex-container:focus-within .figure {
+    display: inline;
+    animation: trajectoryMove 5s linear forwards, disappear 0s linear 3s forwards;
+}
+
+@keyframes trajectoryMove {
+0% {
+    stroke-dashoffset: 0;
+}
+100% {
+    stroke-dashoffset: -300;
+}
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#flex-container:focus-within .letterB {
+    margin-left: 53.5px;
+    margin-top: 73.5px;
+    transform: scale(2.7);
+    animation: rotationB 2s 3s forwards, disappear 1s 5s forwards;
+}
+
+@keyframes rotationB {
+    100%{
+        rotate: -360deg;
+    }
+}
+
+#flex-container:focus-within .letterK {
+    transform: translate(-56.5px, -118.5px) scale(2.7);
+    margin-left: 100px;
+    margin-top: 90px;
+    animation: rotationK 2s 3s forwards, disappear 1s 5s forwards;
+}
+
+@keyframes rotationK {
+    100%{
+        rotate: 360deg;
+    }
+}
+
+#image, #text {
+    position: absolute;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+#image {
+    top: 10px;
+    left: 50%;
+    width: 170px;
+}
+
+#text {
+    bottom: -5px;
+    left: 50%;
+    font-size: 20px;
+    color:black;
+}
+
+#flex-container:focus-within #image, #flex-container:focus-within #text {
+    animation: moveImgText 2s 5.5s ease-in-out forwards;
+}
+
+@keyframes moveImgText {
+    50% {
+        opacity: 0;
+    }
+    100% {
+    opacity: 1;
+    }
+}
+    
+#flex-container:focus-within {
+    animation: Decrease 2.5s 7.5s alternate;
+}
+
+@keyframes Decrease {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(0.8); }
+}
+
+@media (max-width: 768px) {
+    #flex-container {
+        margin-left: 30%;
+    }
+}

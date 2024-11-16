@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Викторина</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/test.css">
+
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header id="header" class="rounded-header"></header>
+    <main>
+        <div id="quiz-container">
+            <button id="next-question" class="hidden">Вопрос</button>
+            <div id="welcome-screen">
+                <h1>Добро пожаловать в викторину!</h1>
+                <button id="start-quiz">Начать викторину</button>
+            </div>
+
+            <div id="questions-container" class="hidden">
+                <div id="end-message" class="hidden"></div> <!-- Блок с сообщением о завершении -->
+                <div id="questions"></div>
+                <div id="answer-row" class="answer-row"></div>
+                <div id="result-message" class="hidden"></div>
+            </div>
+        </div>
+    </main>
+        <!-- Футер сайта -->
+    <footer id="footer" class="rounded-footer"></footer>
+
+    <!-- Подключение JavaScript для загрузки шапки и футера -->
+    <script src="/js/loadHeaderFooter.js"></script>
+    <script src="/js/reviews.js"></script>
+    <script src="/js/test.js"></script>
+</body>
+</html>
